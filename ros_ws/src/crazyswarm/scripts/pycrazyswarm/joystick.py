@@ -15,6 +15,9 @@ class Joystick:
             self.buttonWasPressed = True
         self.lastButtonState = data.buttons[5]
 
+        self.trust = data.axes[0]
+        print(self.trust)
+
     def waitUntilButtonPressed(self):
         while not rospy.is_shutdown() and not self.buttonWasPressed:
             time.sleep(0.01)

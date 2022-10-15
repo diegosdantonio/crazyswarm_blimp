@@ -13,7 +13,7 @@ def goCircle(timeHelper, cf, totalTime, radius, kPosition):
         pos = cf.position()
         startPos = cf.initialPosition + np.array([0, 0, Z])
         center_circle = startPos - np.array([radius, 0, 0])
-        while True:
+        while not swarm.input.checkIfButtonIsPressed():
             time = timeHelper.time() - startTime
             omega = 2 * np.pi / totalTime
             vx = -radius * omega * np.sin(omega * time)  

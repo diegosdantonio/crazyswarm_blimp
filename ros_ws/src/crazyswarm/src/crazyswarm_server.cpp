@@ -808,6 +808,7 @@ public:
     , m_pMocapRigidBodies(pMocapRigidBodies)
     , m_slowQueue()
     , m_cfbc("radio://" + std::to_string(radio) + "/" + std::to_string(channel) + "/2M/FFE7E7E7E7")
+    // , m_cfbc("usb://0")
     , m_isEmergency(false)
     , m_useMotionCaptureObjectTracking(useMotionCaptureObjectTracking)
     , m_br()
@@ -1168,7 +1169,7 @@ private:
         std::stringstream sstr;
         sstr << std::setfill ('0') << std::setw(2) << std::hex << id;
         std::string idHex = sstr.str();
-
+        // std::string uri = "usb://0 ";
         std::string uri = "radio://" + std::to_string(m_radio) + "/" + std::to_string(channel) + "/2M/E7E7E7E7" + idHex;
         std::string tf_prefix = "cf" + std::to_string(id);
         std::string frame = "cf" + std::to_string(id);

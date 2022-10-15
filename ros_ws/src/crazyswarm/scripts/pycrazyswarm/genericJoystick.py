@@ -1,7 +1,9 @@
 import time
 import copy
-# import pyglet
+import pyglet
 from . import keyboard
+
+
 
 # class JoyStickHandler:
 #     def __init__(self):
@@ -22,6 +24,7 @@ from . import keyboard
 
 class Joystick:
     def __init__(self, timeHelper):
+        # joysticks = pyglet.input.get_joysticks()
         # joysticks = pyglet.input.get_joysticks()
         # joystick = joysticks[0]
         # joystick.open()
